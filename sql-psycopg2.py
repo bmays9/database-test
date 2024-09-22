@@ -8,10 +8,10 @@ connection = psycopg2.connect(database="chinook")
 cursor = connection.cursor()
 
 # Query 1 - select all records from the "Artist" table
-cursor.execute('SELECT * FROM "Artist"')
+# cursor.execute('SELECT * FROM "Artist"')
 
 # Query 2 - select only the "Name" column from the "Artist" table
-# cursor.execute('SELECT "Name" FROM "Artist"')
+cursor.execute('SELECT "Name" FROM "Artist"')
 
 # Query 3 - select only "Queen" from the "Artist" table
 # cursor.execute('SELECT * FROM "Artist" WHERE "Name" = %s', ["Queen"])
